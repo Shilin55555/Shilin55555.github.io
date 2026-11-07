@@ -114,9 +114,9 @@
             <span class="venue"><span lang="en">Under review</span><span lang="zh-CN">论文在审</span></span>
             <span class="date"><span lang="en">Sep 2026 – present</span><span lang="zh-CN">2026.09 – 至今</span></span>
           </p>
-          <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Object-separable 3D scenes from textured 2D Gaussians, with clean object boundaries</span><span lang="zh-CN">用纹理化 2D 高斯构建物体级可分离、边界干净的 3D 场景</span></p>
+          <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Object-separable 3D scenes from textured 2D Gaussians, with clean object boundaries</span><span lang="zh-CN">构建物体级可分离、边界干净的 3D 场景</span></p>
           <p class="paper-summary" lang="en">Semantic segmentation with textured 2D Gaussian splatting, aiming for clean object boundaries. I also built a web viewer for inspecting individual Gaussians and their texture maps. More details once the paper is out.</p>
-          <p class="paper-summary" lang="zh-CN">基于纹理化 2D 高斯泼溅构建物体级可分离的高质量 3D 场景表示，让物体边界切分干净，为机器人抓取与交互提供精确几何。我开发了交互式 3D 可视化工具，可以逐个高斯查看纹理图与渲染结果，支持物体提取并快速定位边界问题。论文公开后再补充方法与结果。</p>
+          <ul class="paper-points" lang="zh-CN"><li>构建物体级可分离的高质量 3D 场景表示，为机器人抓取与交互提供精确几何</li><li>提出可学习的逐纹素 label map，精确学习单个高斯内部的物体边界</li><li>开发交互式 3D 可视化工具，可逐高斯查看纹理图与渲染结果，支持物体提取，快速定位边界</li><li>设计 label 引导的自适应切分机制，在训练中将跨越物体边界的高斯沿边界切分，生态完整支持 plug in</li><li>彻底清除跨边界高斯，Chamfer Distance 降至基线的 1/412，mIoU 提高 7.1%</li></ul>
         </div>
       </article>
 
@@ -129,7 +129,7 @@
           </div>
         </div>
         <div class="paper-body">
-          <h3 class="paper-title"><span lang="en">Adaptive Feed-Forward Gaussian Splatting</span><span lang="zh-CN">自适应前馈 3D 高斯泼溅</span></h3>
+          <h3 class="paper-title"><span lang="en">Adaptive Feed-Forward Gaussian Splatting</span><span lang="zh-CN">自适应前馈 3D 高斯溅射</span></h3>
           <p class="paper-authors" lang="en">Research assistant, with PhD mentor Yanshu Zhang and Ke Li · GrUVi Lab, SFU</p>
           <p class="paper-authors" lang="zh-CN">AI 模型研究员，与 Ke Li 教授合作 · GrUVi Lab</p>
           <p class="paper-meta">
@@ -138,7 +138,7 @@
           </p>
           <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Choose each sparse Gaussian's neighbours by feature similarity, not distance</span><span lang="zh-CN">按特征相似度而非几何距离，为稀疏高斯挑选邻居</span></p>
           <p class="paper-summary" lang="en">Feed-forward 3D Gaussian splatting from two views, exploring whether semantic features can pick better neighbours for sparse Gaussians. I re-implemented <a href="https://victkk.github.io/SparseSplat-page/">SparseSplat</a>, whose code is unreleased, on the DepthSplat codebase and replaced its geometric neighbour search with cosine-similarity KNN in feature space, so each Gaussian draws context from neighbours on its own surface.</p>
-          <p class="paper-summary" lang="zh-CN">从两张输入视图前馈生成三维高斯，探索能否用语义特征为稀疏高斯挑选更好的邻居。我在 DepthSplat 代码库上复现了尚未开源的 <a href="https://victkk.github.io/SparseSplat-page/">SparseSplat</a>，并把其中基于几何距离的邻居搜索替换为特征空间中基于余弦相似度的 KNN，让每个高斯从自身所在表面上的邻居汇聚上下文信息。</p>
+          <ul class="paper-points" lang="zh-CN"><li>针对前馈 3DGS 设计了自适应图元裁剪机制，成功剔除冗余的高斯图元</li><li>基于冻结的 VGGT 骨干网络，从稀疏的双视图输入中提取具备几何感知的特征图</li><li>在非像素对齐的特征空间内应用 KNN，根据余弦相似度距离合并高斯图元</li><li>构建交叉注意力机制，利用基于输入视图动态改变的 Token 数量对特征图进行查询</li><li>保持基线水平 PSNR 的同时，将高斯图元数量大幅减少了 88%</li></ul>
         </div>
       </article>
 
@@ -150,7 +150,7 @@
           </div>
         </a>
         <div class="paper-body">
-          <h3 class="paper-title"><span lang="en">Frailty Models for Corner Kicks in Soccer</span><span lang="zh-CN">事件流建模与仿真：足球比赛的多层脆弱模型</span></h3>
+          <h3 class="paper-title"><span lang="en">Frailty Models for Corner Kicks in Soccer</span><span lang="zh-CN">事件流模拟与仿真</span></h3>
           <p class="paper-authors" lang="en">USRA student, with X.&nbsp;Joan Hu and K.&nbsp;Ken Peng · Statistics &amp; Actuarial Science, SFU</p>
           <p class="paper-authors" lang="zh-CN">NSERC 本科生研究奖（USRA）获得者，导师 X.&nbsp;Joan Hu 教授，与 K.&nbsp;Ken Peng 合作 · SFU 统计与精算系</p>
           <p class="paper-meta">
@@ -160,7 +160,7 @@
           </p>
           <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Multi-level frailty models for soccer event streams, fitted about 600× faster</span><span lang="zh-CN">用多层脆弱模型刻画足球事件流，拟合提速约 600 倍</span></p>
           <p class="paper-summary" lang="en">Corner kicks modelled as right-censored event times with game- and team-level frailty. Building on the group's single-level model (<a href="https://arxiv.org/abs/2602.22684">Isaacs et al., 2026</a>), I unified the no-, single- and multi-level frailty models in one Monte Carlo EM estimator and rewrote it in Rcpp/RcppParallel, cutting a single fit from about 8 hours to about a minute.</p>
-          <p class="paper-summary" lang="zh-CN">在生存分析框架下，把比赛事件建模为右删失的事件历史数据，并引入比赛层和球队层的隐脆弱变量构建多层模型，放松传统的独立性假设。在课题组单层模型（<a href="https://arxiv.org/abs/2602.22684">Isaacs 等，2026</a>）的基础上，我设计了定制的蒙特卡洛期望最大化（MCEM）算法做极大似然估计，把无、单层和多层三种脆弱模型统一到同一个估计器中；再用 Rcpp/RcppParallel 重写计算瓶颈，速度提升约 600 倍（单次拟合从约 8 小时缩短到约 1 分钟），并基于该模型模拟完整比赛。</p>
+          <ul class="paper-points" lang="zh-CN"><li>在生存分析框架下，将比赛事件建模为右截尾的事件历史数据</li><li>引入隐脆弱变量构建多层模型，打破并放松了传统独立性假设</li><li>设计定制化的蒙特卡洛期望最大化（MCEM）算法，用于极大似然估计（MLE）推断</li><li>使用 Rcpp 重写计算瓶颈代码，将算法执行速度提升了 600 倍（99.83%）</li><li>基于多层脆弱模型模拟完整比赛，研究成果已封装为数据包开源</li></ul>
         </div>
       </article>
 
@@ -182,7 +182,7 @@
           </p>
           <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">A platformer you play entirely on a piano</span><span lang="zh-CN">一款全程用钢琴操控的平台跳跃游戏</span></p>
           <p class="paper-summary" lang="en">A pixel-art platformer played on a piano: chords launch jumps and scales build staircases. I built the real-time note-judgement engine and the browser version, and used profiling to raise its frame rate from 18 to 60 FPS. The team's 12 levels step through all 24 major and minor keys.</p>
-          <p class="paper-summary" lang="zh-CN">一款全程用钢琴操控的像素风音乐游戏：统一桌面 MIDI、Web MIDI 和键盘三种输入，由乐理结构驱动关卡地形，按下和弦就起跳，弹出音阶就搭起台阶。我负责实时音符判定引擎和网页版，构建了感知、规划、执行闭环的自动演奏 Agent（通关率 100%），主导多世界扩展架构，把关卡内容拆成数据驱动的配置，支持分支路线、Boss 关和存档进度，并通过性能分析把帧率从 18 提升到 60 FPS。</p>
+          <ul class="paper-points" lang="zh-CN"><li>设计全钢琴操控的创新音乐游戏，统一桌面 MIDI、Web MIDI 和键盘三种输入，通过乐理结构自驱动关卡地形</li><li>构建感知、规划、执行闭环的自动演奏 Agent：通关率 100%</li><li>主导多世界扩展架构，把关卡内容拆成数据驱动的配置，支持分支路线、Boss 关路由和存档进度</li></ul>
         </div>
       </article>
 
@@ -206,7 +206,7 @@
           </p>
           <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Competitive programming platform with LLM judging and live results</span><span lang="zh-CN">带 LLM 判题与实时结果推送的编程竞赛平台</span></p>
           <p class="paper-summary" lang="en">A competitive programming platform for SFU with contests and Gemini-based AI judging. I built the role-based dashboards for students, instructors and admins, plus an instructor analytics page that compares contests, groups and students and exports to CSV/JSON/PDF.</p>
-          <p class="paper-summary" lang="zh-CN">面向 ICPC 竞赛队伍的编程竞赛平台，覆盖日常练习、竞赛组织、AI 判题和数据分析。我用 Next.js、React、TypeScript、tRPC 和 PostgreSQL 构建了基于角色的学生、教师、管理员三端系统；整合 Gemini API 实现异步提交处理、持久化判题记录和 SSE 实时结果推送；并开发了教师端数据分析页，支持按比赛、分组和学生对比并导出 CSV/JSON/PDF。</p>
+          <ul class="paper-points" lang="zh-CN"><li>面向 ICPC 竞赛队开发了一个用于日常练习、竞赛组织、AI 判题及数据分析的编程竞赛平台</li><li>使用 Next.js、React、TypeScript、tRPC 和 PostgreSQL 构建了基于角色的多功能操作系统</li><li>整合 Gemini API，实现了异步提交处理、持久化判题记录以及 SSE 实时结果流推送</li></ul>
           <ul class="tags"><li>Next.js</li><li>React</li><li>TypeScript</li><li>tRPC</li><li>PostgreSQL</li></ul>
         </div>
       </article>

@@ -287,6 +287,17 @@ a:hover {
   flex: none;
 }
 
+.paper-points {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.paper-points li + li {
+  margin-top: 2px;
+}
+
 /* One-line TL;DR under each project's metadata */
 
 .tldr {
