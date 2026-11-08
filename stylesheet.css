@@ -269,7 +269,20 @@ a:hover {
 }
 
 [data-lang="zh"] .paper-meta .date {
-  margin-left: auto;
+  display: none;
+}
+
+[data-lang="zh"] .paper-authors[lang="zh-CN"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.paper-authors .date {
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 .paper-summary {
