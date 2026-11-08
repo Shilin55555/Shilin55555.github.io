@@ -152,15 +152,15 @@
         <div class="paper-body">
           <h3 class="paper-title"><span lang="en">Frailty Models for Corner Kicks in Soccer</span><span lang="zh-CN">事件流模拟与仿真</span></h3>
           <p class="paper-authors" lang="en">USRA student, with X.&nbsp;Joan Hu and K.&nbsp;Ken Peng · Statistics &amp; Actuarial Science, SFU</p>
-          <p class="paper-authors" lang="zh-CN">NSERC 本科生研究奖（USRA）获得者，导师 X.&nbsp;Joan Hu 教授，与 K.&nbsp;Ken Peng 合作 · SFU 统计与精算系</p>
+          <p class="paper-authors" lang="zh-CN">加拿大自然科学与工程研究理事会（NSERC）2026年国家级本科生研究奖，与 X.&nbsp;Joan Hu 教授合作</p>
           <p class="paper-meta">
             <span class="venue">USRA</span>
             <span class="date"><span lang="en">May – Sep 2026</span><span lang="zh-CN">2026.05 – 2026.09</span></span>
-            <a href="https://www.sfu.ca/stat-actsci/undergraduate/all-undergrad/research/USRA-projects/USRA-2026/usra-hu-2026.html"><span lang="en">Project page</span><span lang="zh-CN">项目页面</span></a>
+            <a lang="en" href="https://www.sfu.ca/stat-actsci/undergraduate/all-undergrad/research/USRA-projects/USRA-2026/usra-hu-2026.html">Project page</a>
           </p>
-          <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Multi-level frailty models for soccer event streams, fitted about 600× faster</span><span lang="zh-CN">用多层脆弱模型刻画足球事件流，拟合提速约 600 倍</span></p>
+          <p class="tldr"><span class="tldr-tag">TL;DR</span><span lang="en">Multi-level frailty models for soccer event streams, fitted about 600× faster</span><span lang="zh-CN">用多层脆弱模型为事件流建模，拟合提速 600 倍用于仿真</span></p>
           <p class="paper-summary" lang="en">Corner kicks modelled as right-censored event times with game- and team-level frailty. Building on the group's single-level model (<a href="https://arxiv.org/abs/2602.22684">Isaacs et al., 2026</a>), I unified the no-, single- and multi-level frailty models in one Monte Carlo EM estimator and rewrote it in Rcpp/RcppParallel, cutting a single fit from about 8 hours to about a minute.</p>
-          <p class="paper-summary" lang="zh-CN">我们在生存分析框架下，把比赛事件建模为右截尾的事件历史数据，并引入隐脆弱变量构建多层模型，放松了传统的独立性假设。推断上，我设计了定制的蒙特卡洛期望最大化（MCEM）算法做极大似然估计，并用 Rcpp 重写计算瓶颈，速度提升 600 倍（耗时减少 99.83%）。基于这个模型可以模拟完整比赛，研究成果已封装为数据包开源。</p>
+          <p class="paper-summary" lang="zh-CN">我们在生存分析框架下，把比赛事件建模为右截尾的事件历史数据，并引入隐脆弱变量构建多层模型，放松了传统的独立性假设。推断上，我设计了定制的蒙特卡洛期望最大化（MCEM）算法做极大似然估计，并用 Rcpp 重写计算瓶颈，速度提升 600 倍（耗时减少 99.83%）。基于这个模型可以模拟完整比赛，研究成果已封装为数据包开源，并被多个课题组采用。</p>
         </div>
       </article>
 
