@@ -521,3 +521,16 @@ a:hover {
     transition: none !important;
   }
 }
+
+[data-lang="zh"] .entry-sub-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.entry-sub-split b {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--text);
+}
